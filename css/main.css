@@ -1,0 +1,77 @@
+body {
+    background-color: #000;
+    margin: 0px;
+}
+
+#bg {
+    z-index: 0;
+    vertical-align: top;
+}
+
+#canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 150;
+}
+
+#screen {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+#screen.show {
+    opacity: 0.15;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 90px;
+    text-align: center;
+    transition: opacity 0.25s ease, border 0.25s ease;
+    z-index: 200;
+    position: absolute;
+    border: 1px solid transparent;
+}
+
+.circle.obj {
+    width: 6px;
+    height: 6px;
+    opacity: 0.2;
+}
+
+.circle.show {
+    opacity: 1;
+    border: 1px solid #000;
+}
+
+body.show .giv {
+    opacity: 0.4;
+}
+
+.giv {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 9px;
+    height: 9px;
+}
+
+body .giv:hover, .giv.clicked {
+    opacity: 1;
+}
+
+.number {
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    width: 18px;
+    font: 12px "Archive";
+    text-shadow: 2px 2px 0px #000;
+}
