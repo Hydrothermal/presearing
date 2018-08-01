@@ -18,8 +18,8 @@ function generateQuest(q) {
     }
 
     giv.css({
-        left: q.x,
-        top: q.y,
+        left: q.x - 7,
+        top: q.y - 7,
         backgroundColor: q.color,
         border: "2px solid " + shade(q.color, -0.7)
     }).appendTo("body");
@@ -29,8 +29,8 @@ function generateQuest(q) {
 
     for(var i = 0; i < obj.length; i++) {
         $("<div class='circle obj o" + q.id + "'></div>").css({
-            left: obj[i][0],
-            top: obj[i][1],
+            left: obj[i][0] - 4,
+            top: obj[i][1] - 4,
             backgroundColor: q.color
         }).appendTo("body");
     }

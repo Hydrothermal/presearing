@@ -36,7 +36,6 @@ body {
     line-height: 90px;
     text-align: center;
     transition: opacity 0.25s ease, border 0.25s ease;
-    z-index: 200;
     position: absolute;
     border: 1px solid transparent;
 }
@@ -44,7 +43,8 @@ body {
 .circle.obj {
     width: 6px;
     height: 6px;
-    opacity: 0.2;
+    opacity: 0;
+    z-index: 200;
 }
 
 .circle.show {
@@ -57,10 +57,11 @@ body.show .giv {
 }
 
 .giv {
-    opacity: 0.8;
+    opacity: 0.75;
     cursor: pointer;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
+    z-index: 300;
 }
 
 body .giv:hover, .giv.clicked {
