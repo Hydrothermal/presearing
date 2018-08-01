@@ -1,0 +1,154 @@
+body {
+    background-color: #000;
+    margin: 0px;
+}
+
+#bg {
+    z-index: 0;
+    vertical-align: top;
+}
+
+#canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 150;
+}
+
+.box {
+    position: absolute;
+    opacity: 0.9;
+    border: 2px solid #00994d;
+    background-color: #333333;
+    z-index: 80;
+    pointer-events: none;
+}
+
+#box1 {
+    left: 653px;
+    top: 694px;
+    width: 46px;
+    height: 19px;
+}
+
+#box2 {
+    left: 562px;
+    top: 645px;
+    width: 32px;
+    height: 18px;
+}
+
+.line {
+    width: 3px;
+    background-color: #00994d;
+    position: absolute;
+}
+
+#line1 {
+    left: 666px;
+    top: 674px;
+    height: 30px;
+    transform: rotate(130deg);
+}
+
+#line2 {
+    left: 588px;
+    top: 617px;
+    height: 40px;
+    transform: rotate(210deg);
+}
+
+
+#screen {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+#screen.show {
+    opacity: 0.15;
+}
+
+#control {
+    position: fixed;
+    top: 25px;
+    left: 1150px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    width: 200px;
+    z-index: 5000;
+    font: 14px "Istok Web";
+    padding: 4px 8px;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.route {
+    display: block;
+}
+
+.route input {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 3px;
+    margin: 0px;
+    margin-right: 4px;
+}
+
+.quest-wrapper {
+    display: none;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 90px;
+    text-align: center;
+    transition: opacity 0.25s ease, border 0.25s ease;
+    position: absolute;
+    border: 1px solid transparent;
+}
+
+.obj {
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+    z-index: 200;
+}
+
+.obj.show, .clicked .obj {
+    opacity: 1;
+    border: 1px solid #000;
+}
+
+body.show .giv {
+    opacity: 0.4;
+}
+
+.giv {
+    opacity: 1.0;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    z-index: 300;
+}
+
+body .giv:hover, body .clicked .giv {
+    opacity: 1;
+}
+
+.number {
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    width: 18px;
+    font: 12px "Archive";
+    text-shadow: 2px 2px 0px #000;
+}
