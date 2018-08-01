@@ -1,5 +1,6 @@
 var WIDTH = 1498,
     HEIGHT = 1122,
+    routes = [],
     ctx;
 
 var mx, my, locked;
@@ -11,7 +12,7 @@ function shade(color, ratio) {
 
 function generateQuest(q) {
     var obj = q.objectives,
-        wrapper = $("<div class='quest-wrapper'></div>").appendTo("body"),
+        wrapper = $("<div class='quest-wrapper " + q.category + "'></div>").appendTo("body"),
         giv = $("<div class='circle giv' id='g" + q.id + "' hover='" + q.name.replace(/'/g, "&#39;") + "'></div>");
 
     if(q.reverse) {
@@ -25,6 +26,11 @@ function generateQuest(q) {
         border: "2px solid " + shade(q.color, -0.7)
     }).appendTo(wrapper);
 
+    if(routes.indexOf(q.category) === -1) {
+        $("#control").append("<label class='route'><input type='checkbox' checked>" + q.category + "</label>");
+        routes.push(q.category);
+    }
+
     // visible quest IDs
     // $("<div class='number'>" + q.id + "</div>").css("color", q.color).appendTo(giv);
 
@@ -37,10 +43,25 @@ function generateQuest(q) {
     }
 }
 
+function redrawAllQuestLines() {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT);
+    $(".clicked .giv").each(function() {
+        drawQuestLines(this);
+    });
+}
+
 function drawQuestLines(giv, hover) {
     var id = giv.id.substr(1),
         objectives = $(".o" + id),
-        giver = $(giv).offset();
+        giver_pos;
+
+    giv = $(giv);
+
+    if(!giv.is(":visible")) {
+        return;
+    }
+
+    giver_pos = $(giv).offset();
 
     if(hover) {
         $("body, #screen").toggleClass("show");
@@ -53,7 +74,7 @@ function drawQuestLines(giv, hover) {
         var offset = $(this).offset();
 
         ctx.beginPath();
-        ctx.moveTo(giver.left + 7, giver.top + 7);
+        ctx.moveTo(giver_pos.left + 7, giver_pos.top + 7);
         ctx.lineTo(offset.left + 5, offset.top + 5);
         ctx.stroke();
     });
@@ -72,6 +93,14 @@ $(function() {
     $(".giv:not(#follow)").hover(function() {
         drawQuestLines(this, true);
     });
+
+    $(".route input").change(function() {
+        var route = $(this).parent().text();
+
+        $("." + route).toggle();
+        $("#quest-count").text($(".quest-wrapper:visible").length);
+        redrawAllQuestLines();
+    }).change();
 
     $(document)
         .on("mouseenter", "[hover]", function() {
@@ -102,11 +131,7 @@ $(function() {
         .on("mouseleave", "[hover]", function() {
             hovertag.removeClass("show");
             $(this).removeClass("hover");
-            ctx.clearRect(0, 0, WIDTH, HEIGHT);
-
-            $(".clicked .giv").each(function() {
-                drawQuestLines(this);
-            });
+            redrawAllQuestLines();
         })
         .on("click", ".giv", function() {
             $(this).parent().toggleClass("clicked");

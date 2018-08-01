@@ -30,6 +30,38 @@ body {
     opacity: 0.15;
 }
 
+#control {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    width: 200px;
+    z-index: 5000;
+    font: 14px "Istok Web";
+    padding: 4px 8px;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.route {
+    display: block;
+}
+
+.route input {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 3px;
+    margin: 0px;
+    margin-right: 4px;
+}
+
+.quest-wrapper {
+    display: none;
+}
+
 .circle {
     border-radius: 50%;
     display: inline-block;
