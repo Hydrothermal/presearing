@@ -11,6 +11,7 @@ function shade(color, ratio) {
 
 function generateQuest(q) {
     var obj = q.objectives,
+        wrapper = $("<div class='quest-wrapper'></div>").appendTo("body"),
         giv = $("<div class='circle giv' id='g" + q.id + "' hover='" + q.name.replace(/'/g, "&#39;") + "'></div>");
 
     if(q.reverse) {
@@ -22,7 +23,7 @@ function generateQuest(q) {
         top: q.y - 7,
         backgroundColor: q.color,
         border: "2px solid " + shade(q.color, -0.7)
-    }).appendTo("body");
+    }).appendTo(wrapper);
 
     // visible quest IDs
     // $("<div class='number'>" + q.id + "</div>").css("color", q.color).appendTo(giv);
@@ -32,8 +33,30 @@ function generateQuest(q) {
             left: obj[i][0] - 4,
             top: obj[i][1] - 4,
             backgroundColor: q.color
-        }).appendTo("body");
+        }).appendTo(wrapper);
     }
+}
+
+function drawQuestLines(giv, hover) {
+    var id = giv.id.substr(1),
+        objectives = $(".o" + id),
+        giver = $(giv).offset();
+
+    if(hover) {
+        $("body, #screen").toggleClass("show");
+        objectives.toggleClass("show");
+    }
+
+    ctx.strokeStyle = shade(quests[id].color, 0.25);
+
+    objectives.each(function() {
+        var offset = $(this).offset();
+
+        ctx.beginPath();
+        ctx.moveTo(giver.left + 7, giver.top + 7);
+        ctx.lineTo(offset.left + 5, offset.top + 5);
+        ctx.stroke();
+    });
 }
 
 $(function() {
@@ -47,22 +70,7 @@ $(function() {
     }
     
     $(".giv:not(#follow)").hover(function() {
-        var id = this.id.substr(1),
-            objectives = $(".o" + id),
-            giver = $(this).offset();
-        
-        $("body, #screen").toggleClass("show");
-        objectives.toggleClass("show");
-        ctx.strokeStyle = shade(quests[id].color, 0.25);
-
-        objectives.each(function() {
-            var offset = $(this).offset();
-
-            ctx.beginPath();
-            ctx.moveTo(giver.left + 7, giver.top + 7);
-            ctx.lineTo(offset.left + 5, offset.top + 5);
-            ctx.stroke();
-        });
+        drawQuestLines(this, true);
     });
 
     $(document)
@@ -71,10 +79,6 @@ $(function() {
                 text = "<b>" + $this.attr("hover") + "</b>",
                 offset = $this.offset(),
                 timeout = hovertag.css("opacity") * 100;
-
-            if($this.hasClass("clicked")) {
-                return;
-            }
 
             setTimeout(function() {
                 // Check if the circle is still hovered in case mouse left before the timeout started
@@ -99,9 +103,13 @@ $(function() {
             hovertag.removeClass("show");
             $(this).removeClass("hover");
             ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+            $(".clicked .giv").each(function() {
+                drawQuestLines(this);
+            });
         })
         .on("click", ".giv", function() {
-            $(this).addClass("clicked");
+            $(this).parent().toggleClass("clicked");
         })
 
         // Testing
