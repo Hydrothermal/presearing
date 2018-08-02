@@ -1,0 +1,259 @@
+body {
+    background-color: #000;
+    margin: 0px;
+}
+
+#bg {
+    z-index: 0;
+    vertical-align: top;
+}
+
+#canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 150;
+}
+
+.box {
+    position: absolute;
+    border: 2px solid #1affa3;
+    background-color: #1a1a1a;
+    opacity: 1.0;
+    z-index: 80;
+    pointer-events: none;
+}
+
+#box1 {
+    left: 658px;
+    top: 692px;
+    width: 46px;
+    height: 19px;
+}
+
+#box2 {
+    left: 562px;
+    top: 645px;
+    width: 32px;
+    height: 18px;
+}
+
+#box3 {
+    left: 998px;
+    top: 0px;
+    width: 496px;
+    height: 615px;
+    background-color: transparent;
+}
+
+#box4 {
+    left: 333px;
+    top: 532px;
+    width: 46px;
+    height: 19px;
+}
+
+#box5 {
+    left: 694px;
+    top: 466px;
+    width: 32px;
+    height: 18px;
+}
+
+#box6 {
+    left: 451px;
+    top: 769px;
+    width: 32px;
+    height: 18px;
+}
+
+#box7 {
+    left: 617px;
+    top: 712px;
+    width: 32px;
+    height: 18px;
+}
+
+#box8 {
+    left: 1401px;
+    top: 240px;
+    width: 32px;
+    height: 18px;
+}
+
+#box9 {
+    left: 739px;
+    top: 439px;
+    width: 92px;
+    height: 36px;
+}
+
+#box10 {
+    left: 832px;
+    top: 499px;
+    width: 36px;
+    height: 92px;
+}
+
+.line {
+    width: 3px;
+    background-color: #1affa3;
+    position: absolute;
+}
+
+#line1 {
+    left: 668px;
+    top: 664px;
+    height: 50px;
+    transform: rotate(125deg);
+}
+
+#line2 {
+    left: 588px;
+    top: 617px;
+    height: 40px;
+    transform: rotate(210deg);
+}
+
+#line3 {
+    left: 361px;
+    top: 545px;
+    height: 30px;
+    transform: rotate(150deg);
+}
+
+#line4 {
+    left: 715px;
+    top: 479px;
+    height: 30px;
+    transform: rotate(150deg);
+}
+
+#line5 {
+    left: 494px;
+    top: 769px;
+    height: 30px;
+    transform: rotate(110deg);
+}
+
+#line6 {
+    left: 636px;
+    top: 686px;
+    height: 30px;
+    transform: rotate(190deg);
+}
+
+#line7 {
+    left: 772px;
+    top: 459px;
+    height: 80px;
+    transform: rotate(211deg);
+}
+
+#line8 {
+    left: 820px;
+    top: 500px;
+    height: 50px;
+    transform: rotate(150deg);
+}
+
+#line9 {
+    left: 1438px;
+    top: 237px;
+    height: 30px;
+    transform: rotate(100deg);
+}
+
+#screen {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+#screen.show {
+    opacity: 0.15;
+}
+
+#control {
+    position: fixed;
+    top: 440px;
+    left: 6px;
+    border: 1px solid #000;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    width: 200px;
+    z-index: 5000;
+    font: 14px "Istok Web";
+    padding: 4px 8px;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.route {
+    display: block;
+}
+
+.route input {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 3px;
+    margin: 0px;
+    margin-right: 4px;
+}
+
+.quest-wrapper {
+    display: none;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 90px;
+    text-align: center;
+    transition: opacity 0.25s ease, border 0.25s ease;
+    position: absolute;
+    border: 1px solid transparent;
+}
+
+.obj {
+    width: 6px;
+    height: 6px;
+    opacity: 0;
+    z-index: 200;
+}
+
+.obj.show, .clicked .obj {
+    opacity: 1;
+    border: 1px solid #000;
+}
+
+body.show .giv {
+    opacity: 0.4;
+}
+
+.giv {
+    opacity: 1.0;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    z-index: 300;
+}
+
+body .giv:hover, body .clicked .giv {
+    opacity: 1;
+}
+
+.number {
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    width: 18px;
+    font: 12px "Archive";
+    text-shadow: 2px 2px 0px #000;
+}
