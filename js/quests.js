@@ -4,7 +4,7 @@ var quests = [
         name: "Poor Tenant",
         x: 808, y: 505,
         color: "#01a08a",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[654, 675]]
     },
     {
@@ -12,7 +12,7 @@ var quests = [
         name: "The Poison Devourer",
         x: 808, y: 505,
         color: "#6fd4fd",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[731, 672], [602, 613]]
     },
     {
@@ -20,7 +20,7 @@ var quests = [
         name: "The Wayward Wizard",
         x: 808, y: 505,
         color: "#ff1a1a",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[398, 758]]
     },
     {
@@ -28,7 +28,7 @@ var quests = [
         name: "Bandit Raid",
         x: 808, y: 505,
         color: "#ec9e33",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[660, 586]]
     },
     {
@@ -36,7 +36,7 @@ var quests = [
         name: "Trouble in the Woods",
         x: 808, y: 505,
         color: "#d1ff58",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[642, 680], [704, 683]]
     },
     {
@@ -44,7 +44,7 @@ var quests = [
         name: "Charr at the Gate",
         x: 808, y: 505,
         color: "#ffa31a",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[670, 477]]
     },
     {
@@ -52,7 +52,7 @@ var quests = [
         name: "A Gift for Althea",
         x: 741, y: 506,
         color: "#ff3377",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[646, 655], [669, 565], [670, 677]]
     },
     {
@@ -60,7 +60,7 @@ var quests = [
         name: "Across the Wall",
         x: 662, y: 470,
         color: "#ff0000",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[616, 308]]
     },
     {
@@ -68,7 +68,7 @@ var quests = [
         name: "Little Thom's Big Cloak",
         x: 633, y: 653,
         color: "#d966ff",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[556, 773]]
     },
     {
@@ -76,7 +76,7 @@ var quests = [
         name: "The Hunter's Horn",
         x: 615, y: 691,
         color: "#ff6401",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[663, 1002], [735, 947]]
     },
     {
@@ -84,7 +84,7 @@ var quests = [
         name: "The Egg Hunter",
         x: 779, y: 648,
         color: "#1e8018",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[724, 671], [744, 639], [756, 652]]
     },
     {
@@ -92,7 +92,7 @@ var quests = [
         name: "The Elementalist Experiment",
         x: 459, y: 857,
         color: "#ff1a1a",
-        category: "route1_plain_ele",
+        categories: ["Route 1 Normal Quests", "Route 1 Elementalist Quests"],
         objectives: []
     },
     {
@@ -100,7 +100,7 @@ var quests = [
         name: "The Orchard",
         x: 1050, y: 799,
         color: "#ff1a1a",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[1038, 889]]
     },
     {
@@ -108,7 +108,7 @@ var quests = [
         name: "A Mesmer's Burden",
         x: 728, y: 505,
         color: "#c61aff",
-        category: "route1_plain_mes",
+        categories: ["Route 1 Normal Quests", "Route 1 Mesmer Quests"],
         objectives: [[669, 526]]
     },
     {
@@ -116,7 +116,7 @@ var quests = [
         name: "A Secondary Profession",
         x: 808, y: 505,
         color: "#ff3377",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: []
     },
     {
@@ -124,7 +124,7 @@ var quests = [
         name: "Adventure With An Ally",
         x: 765, y: 539,
         color: "#80bfff",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: []
     },
     {
@@ -132,7 +132,7 @@ var quests = [
         name: "A Message From A Friend",
         x: 808, y: 505,
         color: "#c61aff",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: []
     },
     {
@@ -140,7 +140,7 @@ var quests = [
         name: "War Preperations",
         x: 808, y: 505,
         color: "#ff6666",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[751, 530]]
     },
     {
@@ -148,7 +148,7 @@ var quests = [
         name: "Further Adventures",
         x: 754, y: 533,
         color: "#66ff33",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[642, 680]]
     },
     {
@@ -156,7 +156,7 @@ var quests = [
         name: "Grawl Invasion",
         x: 585, y: 490,
         color: "#FF8C00",
-        category: "route1_plain_war",
+        categories: ["Route 1 Normal Quests", "Route 1 Warrior Quests"],
         objectives: [[508, 540], [517, 537], [509, 533]]
     },
     {
@@ -164,7 +164,7 @@ var quests = [
         name: "Gwen's Flute",
         x: 778, y: 553,
         color: "#ff3377",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[746, 594]]
     },
     {
@@ -172,7 +172,7 @@ var quests = [
         name: "Ranger's Companion",
         x: 746, y: 767,
         color: "#80ff00",
-        category: "route1_plain_ran",
+        categories: ["Route 1 Normal Quests", "Route 1 Ranger Quests"],
         objectives: [[750, 844]]
     },
     {
@@ -180,7 +180,7 @@ var quests = [
         name: "The Worm Problem",
         x: 639, y: 686,
         color: "#ffa31a",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: [[629, 585]]
     },
     {
@@ -188,7 +188,7 @@ var quests = [
         name: "Protection Prayers",
         x: 560, y: 488,
         color: "#37FDFC",
-        category: "route1_prof_mo",
+        categories: ["Route 1 Monk Quests"],
         objectives: [[650, 575]]
     },
     {
@@ -196,7 +196,7 @@ var quests = [
         name: "The Blessings of Balthazar",
         x: 605, y: 616,
         color: "#80bfff",
-        category: "route1_prof_mo",
+        categories: ["Route 1 Monk Quests"],
         objectives: [[625, 554]],
     },
     {
@@ -204,7 +204,7 @@ var quests = [
         name: "Domination Magic",
         x: 506, y: 790,
         color: "#c61aff",
-        category: "route1_prof_mes",
+        categories: ["Route 1 Mesmer Quests"],
         objectives: [[620, 846]]
     },
     {
@@ -212,7 +212,7 @@ var quests = [
         name: "The Supremacy of Air",
         x: 506, y: 790,
         color: "#ff1a1a",
-        category: "route1_prof_ele",
+        categories: ["Route 1 Elementalist Quests"],
         objectives: [[446, 849]]
     },
     {
@@ -220,7 +220,7 @@ var quests = [
         name: "Unnatural Growths",
         x: 654, y: 1008,
         color: "#01ff8e",
-        category: "route1_prof_ran",
+        categories: ["Route 1 Ranger Quests"],
         objectives: [[510, 981]]
     },
     {
@@ -228,7 +228,7 @@ var quests = [
         name: "A Test of Marksmanship",
         x: 838, y: 797,
         color: "#adff2f",
-        category: "route1_prof_ran",
+        categories: ["Route 1 Ranger Quests"],
         objectives: []
     },
     {
@@ -236,7 +236,7 @@ var quests = [
         name: "The Vineyard Problem",
         x: 369, y: 571,
         color: "#FF8C00",
-        category: "route1_prof_war",
+        categories: ["Route 1 Warrior Quests"],
         objectives: [[438, 622]]
     },
     {
@@ -244,7 +244,7 @@ var quests = [
         name: "Warriors Challenge",
         x: 369, y: 571,
         color: "#FF8C00",
-        category: "route1_prof_war",
+        categories: ["Route 1 Warrior Quests"],
         objectives: [[463, 622]]
     },
     {
@@ -252,7 +252,7 @@ var quests = [
         name: "The True King",
         x: 369, y: 571,
         color: "#FFD700",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[1054, 752]]
     },
     {
@@ -260,7 +260,7 @@ var quests = [
         name: "The Rogue's Replacement",
         x: 730, y: 508,
         color: "#c61aff",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[778, 651]]
     },
     {
@@ -268,7 +268,7 @@ var quests = [
         name: "Opposition To The King",
         x: 645, y: 675,
         color: "#ff016f",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[560, 488], [551, 493],[585, 490]]
     },
     {
@@ -276,7 +276,7 @@ var quests = [
         name: "The Path To Glory",
         x: 808, y: 505,
         color: "#ff016f",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: []
     },
     {
@@ -284,7 +284,7 @@ var quests = [
         name: "Tithe The Ashford Abby",
         x: 645, y: 675,
         color: "#c61aff",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[553, 486]]
     },
     {
@@ -292,7 +292,7 @@ var quests = [
         name: "Unsettling Rumors",
         x: 645, y: 675,
         color: "#ff016f",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[602, 613], [805, 502]]
     },
     {
@@ -300,7 +300,7 @@ var quests = [
         name: "A Monks Mission",
         x: 605, y: 616,
         color: "#80bfff",
-        category: "route1_plain_mo",
+        categories: ["Route 1 Normal Quests", "Route 1 Monk Quests"],
         objectives: [[394, 519], [473, 721], [584, 616]]
     },
     {
@@ -308,7 +308,7 @@ var quests = [
         name: "Rites Of Rememberance",
         x: 105, y: 558,
         color: "#00ff00",
-        category: "route1_plain",
+        categories: ["Route 1 Normal Quests"],
         objectives: []
     },
     {
@@ -316,7 +316,7 @@ var quests = [
         name: "The Ncromancer's Novice",
         x: 105, y: 572,
         color: "#00ff00",
-        category: "route1_plain_nec",
+        categories: ["Route 1 Normal Quests", "Route 1 Necromancer Quests"],
         objectives: []
     },
     {
@@ -324,7 +324,7 @@ var quests = [
         name: "The Accursed Path",
         x: 105, y: 544,
         color: "#00ff00",
-        category: "route1_prof_nec",
+        categories: ["Route 1 Necromancer Quests"],
         objectives: []
     },
     {
@@ -332,7 +332,7 @@ var quests = [
         name: "The Power Of Blood",
         x: 551, y: 493,
         color: "#00ff00",
-        category: "route1_prof_nec",
+        categories: ["Route 1 Necromancer Quests"],
         objectives: [[394, 519], [473, 721], [584, 616]]
     },
     {
@@ -340,7 +340,7 @@ var quests = [
         name: "Charr In The Catacombs",
         x: 808, y: 505,
         color: "#ffa31a",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[394, 519], [473, 721], [584, 616]]
     },
     {
@@ -348,7 +348,7 @@ var quests = [
         name: "The Prize Moa Bird",
         x: 639, y: 686,
         color: "#ff016f",
-        category: "route2_plain",
+        categories: ["Route 2 Normal Quests"],
         objectives: [[394, 519], [473, 721], [584, 616]]
     },
     {
@@ -356,7 +356,7 @@ var quests = [
         name: "Warrior Test",
         x: 754, y: 533,
         color: "#ffa31a",
-        category: "route1_prof_war",
+        categories: ["Route 1 Warrior Quests"],
         objectives: [[747, 583]]
     },
     {
@@ -364,7 +364,7 @@ var quests = [
         name: "Ranger Test",
         x: 754, y: 533,
         color: "#ff016f",
-        category: "route1_prof_ran",
+        categories: ["Route 1 Ranger Quests"],
         objectives: [[747, 583]]
     },
     {
@@ -372,7 +372,7 @@ var quests = [
         name: "Mesmer Test",
         x: 754, y: 533,
         color: "#c61aff",
-        category: "route1_prof_mes",
+        categories: ["Route 1 Mesmer Quests"],
         objectives: [[739, 556]]
     },
     {
@@ -380,7 +380,7 @@ var quests = [
         name: "Elementalist Test",
         x: 754, y: 533,
         color: "#ff1a1a",
-        category: "route1_prof_ele",
+        categories: ["Route 1 Elementalist Quests"],
         objectives: [[747, 583]]
     },
     {
@@ -388,7 +388,7 @@ var quests = [
         name: "Monk Test",
         x: 754, y: 533,
         color: "#80bfff",
-        category: "route1_prof_mo",
+        categories: ["Route 1 Monk Quests"],
         objectives: [[747, 583]]
     },
     {
@@ -396,7 +396,7 @@ var quests = [
         name: "Necromancer Test",
         x: 754, y: 533,
         color: "#00ff00",
-        category: "route1_prof_nec",
+        categories: ["Route 1 Necromancer Quests"],
         objectives: [[739, 556]]
     },
     {
@@ -404,7 +404,7 @@ var quests = [
         name: "A New Warrior Trainer",
         x: 754, y: 533,
         color: "#ffa31a",
-        category: "route2_prof_war",
+        categories: ["Route 2 Warrior Quests"],
         objectives: [[582, 487]]
     },
     {
@@ -412,7 +412,7 @@ var quests = [
         name: "A New Ranger Trainer",
         x: 754, y: 533,
         color: "#ff016f",
-        category: "route2_prof_ran",
+        categories: ["Route 2 Ranger Quests"],
         objectives: [[743, 764]]
     },
     {
@@ -420,7 +420,7 @@ var quests = [
         name: "A New Mesmer Trainer",
         x: 754, y: 533,
         color: "#c61aff",
-        category: "route2_prof_mes",
+        categories: ["Route 2 Mesmer Quests"],
         objectives: [[725, 502]]
     },
     {
@@ -428,7 +428,7 @@ var quests = [
         name: "A New Elementalist Trainer",
         x: 754, y: 533,
         color: "#ff1a1a",
-        category: "route2_prof_ele",
+        categories: ["Route 2 Elementalist Quests"],
         objectives: [[456, 854]]
     },
     {
@@ -436,7 +436,7 @@ var quests = [
         name: "A New Monk Trainer",
         x: 754, y: 533,
         color: "#80bfff",
-        category: "route2_prof_mo",
+        categories: ["Route 2 Monk Quests"],
         objectives: [[602, 613]]
     },
     {
@@ -444,7 +444,7 @@ var quests = [
         name: "A New Necromancer Trainer",
         x: 754, y: 533,
         color: "#00ff00",
-        category: "route2_prof_nec",
+        categories: ["Route 2 Necromancer Quests"],
         objectives: [[394, 519], [473, 721], [584, 616]]
     },
     {
@@ -452,7 +452,7 @@ var quests = [
         name: "Vanguard Quests Eventually",
         x: 808, y: 505,
         color: "#ff3377",
-        category: "routev",
+        categories: ["Vanguard Quests"],
         objectives: []
     },
 ];

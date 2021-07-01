@@ -10,9 +10,13 @@ function shade(color, ratio) {
     return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
 }
 
+function cleanCategory(cat) {
+    return cat.toLowerCase().replace(/ /g, "_");
+}
+
 function generateQuest(q) {
     var obj = q.objectives,
-        wrapper = $("<div class='quest-wrapper " + q.category + "'></div>").appendTo("body"),
+        wrapper = $("<div class='quest-wrapper'></div>").appendTo("body"),
         giv = $("<div class='circle giv' id='g" + q.id + "' hover='" + q.name.replace(/'/g, "&#39;") + "'></div>");
 
     if(q.reverse) {
@@ -26,10 +30,13 @@ function generateQuest(q) {
         border: "2px solid " + shade(q.color, -0.7)
     }).appendTo(wrapper);
 
-    if(routes.indexOf(q.category) === -1) {
-        $("#control").append("<label class='route'><input type='checkbox' checked>" + q.category + "</label>");
-        routes.push(q.category);
-    }
+    q.categories.forEach(function(cat) {
+        if(routes.indexOf(cat) === -1) {
+            $("#control").append("<label class='route'><input type='checkbox' checked>" + cat + "</label>");
+            wrapper.addClass(cleanCategory(cat));
+            routes.push(cat);
+        }
+    });
 
     // visible quest IDs
     // $("<div class='number'>" + q.id + "</div>").css("color", q.color).appendTo(giv);
@@ -95,7 +102,7 @@ $(function() {
     });
 
     $(".route input").change(function() {
-        var route = $(this).parent().text();
+        var route = cleanCategory($(this).parent().text());
 
         $("." + route).toggle();
         $("#quest-count").text($(".quest-wrapper:visible").length);
